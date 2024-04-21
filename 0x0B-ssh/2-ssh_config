@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Client cofiguration file
+
+Host 54.174.159.86 
+	IdentifyFile ~/.ssh/school
+	PasswordAuthentification no
