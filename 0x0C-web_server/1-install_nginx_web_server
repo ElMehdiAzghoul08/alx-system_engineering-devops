@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#install nginx web server
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+rm /etc/nginx/sites-available/default <<EOF
+
+cat > /etc/nginx/sites-available/defualt <<EOF
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  
+  root /var/www/html;
+  index index.html index.htm index.nginx-debian.html;
+
+  server_name _;
+  
+  location / {
+	retrun 200 "Hello World!";
+  }
+}
+EOF
+
+sudo service nginx restart
