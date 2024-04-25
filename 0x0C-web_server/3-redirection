@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Configure my Nginx server to have a custom 404 page that contains the string 
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee /var/www/html/index.html
+redirect_link="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "s/server_name _;/$redirect_link/" /etc/nginx/sites-enabled/default
+service nginx restart
