@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 #Bash script that configures a server to the above requirements...
 
+<<<<<<< HEAD
 sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-available/default
 service nginx restart
 
+=======
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+>>>>>>> 7f0aaf0bd37e5a859335d969d39cc4473250fe0d
