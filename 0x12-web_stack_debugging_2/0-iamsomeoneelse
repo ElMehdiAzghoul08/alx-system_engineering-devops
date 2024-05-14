@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Bash script that accepts one argument -Run software as another user task
+su -c "whoami" - "$1"
