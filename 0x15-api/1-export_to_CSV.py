@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Python script to export data in the CSV format --Export to CSV task"""
 import requests
 import sys
