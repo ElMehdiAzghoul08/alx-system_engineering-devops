@@ -9,11 +9,10 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    id_ = sys.argv[1]
+    id_ = int(sys.argv[1])
 
     url_usr_ = f"https://jsonplaceholder.typicode.com/users/{id_}"
-    url_tds_ = f"https://jsonplaceholder.typicode.com/todos?\
-                    userId={id_}"
+    url_tds_ = f"https://jsonplaceholder.typicode.com/todos?userId={id_}"
 
     res_usr_ = requests.get(url_usr_)
     data_usr_ = res_usr_.json()
@@ -29,5 +28,5 @@ if __name__ == "__main__":
 
     print(f"Employee {emp_name_} is done with tasks(\
             {num_tasks_finished_}/{tot_tasks_}):")
-    for t in tasks_finished_[:11]:
-        print(f"\t {t.get('title')}")
+    for t in tasks_finished_:
+        print(f"\t{t['title']}")
