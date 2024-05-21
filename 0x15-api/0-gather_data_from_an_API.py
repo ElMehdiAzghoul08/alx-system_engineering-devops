@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
             print(f"Employee {emp_name_} is done with tasks(\
                     {num_tasks_finished_}/{tot_tasks_}):")
-            for t in tasks_finished_[:11]:
+            for t in tasks_finished_:
                 print(f"\t {t.get('title')}")
 
         except ValueError:
