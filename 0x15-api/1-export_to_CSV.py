@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Python script to export data in the CSV format --Export to CSV task"""
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     id_ = int(sys.argv[1])
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     file_ = f"{user_id_}.csv"
 
     with open(file_, 'w', newline='') as file_csv_:
-        w_csv_ = csv.writer(file_csv_)
+        w_csv_ = csv.writer(file_csv_, quoting=csv.QUOTE_ALL)
         w_csv_.writerow(['USER_ID', 'USERNAME', '\
 TASK_COMPLETED_STATUS', 'TASK_TITLE'])
 
