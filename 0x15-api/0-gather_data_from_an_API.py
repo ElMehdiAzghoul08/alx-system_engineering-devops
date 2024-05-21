@@ -31,9 +31,9 @@ if __name__ == "__main__":
             tasks_finished_ = [t for t in data_tds_ if t.get('completed')]
             num_tasks_finished_ = len(tasks_finished_)
 
-            print(f"Employee {emp_name_} is done with tasks\
-                    ({num_tasks_finished_}/{tot_tasks_}):")
-            for t in tasks_finished_:
+            print(f"Employee {emp_name_} is done with tasks(\
+                    {num_tasks_finished_}/{tot_tasks_}):")
+            for t in tasks_finished_[:11]:
                 print(f"\t {t.get('title')}")
 
         except ValueError:
