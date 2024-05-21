@@ -16,7 +16,6 @@ if __name__ == "__main__":
     res_tds_ = requests.get(url_tds_)
     data_tds_ = res_tds_.json()
 
-    emp_name_ = data_usr_.get('name')
     user_id_ = data_usr_.get('id')
     name_usr_ = data_usr_.get('username')
 
